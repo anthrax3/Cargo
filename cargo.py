@@ -2,7 +2,7 @@
 
 from cargo import utils
 
-version = "1.0"
+version = "1.0.0"
 author = "by Nick Aliferopoulos"
 banner = """
 
