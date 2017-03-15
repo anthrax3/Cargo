@@ -1,4 +1,5 @@
 from attribute import Attribute
+import exceptions
 
 class Module():
     """"Base class for exploits. Use this to implement an exploit"""
@@ -32,13 +33,13 @@ class Module():
         try:
             return self.attributes[name].data
         except KeyError:
-            raise Exception("Error: Attribute not found")
+            raise exceptions.AttributeException("Error: Attribute '" + name + "' not found", name)
 
     def setAttribute(self, name, data):
         try:
             self.attributes[name]
         except KeyError:
-            raise Exception("Error: Attribute not found")
+            raise exceptions.AttributeException("Error: Attribute '" + name + "' not found", name)
         self.attributes[name].data = data
 
     def addAttribute(self, name, data, description=""):

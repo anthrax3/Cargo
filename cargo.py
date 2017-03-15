@@ -65,7 +65,9 @@ while not str == "quit" and not str == "exit":
     except(exceptions.CargoException) as error:
         print error
     except(exceptions.ModuleException) as error:
-        print "Error: Could not load module '" + error.module_name + "'"
+        print error
+    except(exceptions.AttributeException) as error:
+        print error
     if current == "null":
         str = raw_input("cargo>")
     else:
