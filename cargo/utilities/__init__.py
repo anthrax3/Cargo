@@ -3,6 +3,7 @@
 import os
 import importlib
 from .. import modules as cargo_modules
+from .. import exceptions
 
 DIRECTORY_MODULES = cargo_modules.__path__[0]
 DIRECTORY_EXPLOITS = os.path.join(DIRECTORY_MODULES, 'exploits')
@@ -16,4 +17,4 @@ def import_cargo_module(path):
         module = importlib.import_module(path)
         return getattr(module, "Module")
     except(ImportError, AttributeError, KeyError) as error:
-        raise Exception(error)
+        raise exceptions.ModuleException(path)
