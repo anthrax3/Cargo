@@ -5,7 +5,7 @@ Welcome to Cargo! Cargo is a framework for loading and executing modules written
 Cargo is currently in heavy development. Features currently implemented are *module* loading and executing, *attribute* setting, and of course command parsing. More features are to be added in the next update.
 
 ## How do I...? ##
-Loading *modules* is really easy, just type ### load *cargo-path-to-module ###. The Cargo path root is cargo and you can load any module that is contained in that directory by specifying it's full path, separating directories by dots. (Example: use cargo.modules.exploits.template)
+Loading *modules* is really easy, just type ### load *cargo-path-to-module* ###. The Cargo path root is cargo and you can load any module that is contained in that directory by specifying it's full path, separating directories by dots. (Example: use cargo.modules.exploits.template)
 
 Setting *attributes* is even easier. Just type ### set *attribute-name* *value* ###. Make sure you have loaded a module before that, though!
 
